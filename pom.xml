@@ -39,7 +39,7 @@
   <properties>
     <maven.min-version>3.5.2</maven.min-version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <global_antlr_version>4.7.2</global_antlr_version>
+    <global_antlr_version>4.13.2</global_antlr_version>
   </properties>
   <distributionManagement>
     <snapshotRepository>
@@ -88,8 +88,10 @@
         <version>${global_antlr_version}</version>
         <configuration>
           <outputDirectory>${basedir}/src/main/java</outputDirectory>
-          <listener>true</listener>
-          <visitor>true</visitor>
+          <arguments>
+            <argument>-listener</argument>
+            <argument>-visitor</argument>
+          </arguments>
         </configuration>
         <executions>
           <execution>
